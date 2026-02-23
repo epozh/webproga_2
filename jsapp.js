@@ -396,3 +396,38 @@ function updateTasksOrder() {
     
     tasks = newOrder;
 }
+
+// ===== ОБРАБОТЧИКИ СОБЫТИЙ =====
+
+// Добавление новой задачи
+taskForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const title = taskInput.value.trim();
+    const date = dateInput.value;
+    
+    if (title && date) {
+        addTask(title, date);
+        taskInput.value = '';
+        dateInput.value = '';
+    }
+});
+
+// Поиск
+searchInput.addEventListener('input', renderTasks);
+
+// Фильтрация
+filterSelect.addEventListener('change', renderTasks);
+
+// Сортировка
+sortSelect.addEventListener('change', renderTasks);
+
+// ===== ИНИЦИАЛИЗАЦИЯ =====
+
+function init() {
+    loadTasks();
+    renderTasks();
+}
+
+// Запуск приложения
+init();

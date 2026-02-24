@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family:  Arial, Helvetica, Verdana;
     background: linear-gradient(#d6bc4a, #d6bc4a);
     min-height: 100vh;
     padding: 20px;
@@ -61,7 +61,7 @@ body {
 
 .add-btn {
     padding: 12px 30px;
-    background: #667eea;
+    background: #4db956;
     color: white;
     border: none;
     border-radius: 10px;
@@ -71,7 +71,7 @@ body {
 }
 
 .add-btn:hover {
-    background: #5568d3;
+    background: #4db956;
     transform: translateY(-2px);
 }
 
